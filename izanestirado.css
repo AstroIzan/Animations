@@ -1,0 +1,182 @@
+/* ANIMACIONES */
+    .line {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    * { transition: all 1s; }
+    /* HEADER */
+        /* LOGO */
+            #logo:hover img { transform: translateX(230px) rotate(360deg); }	
+
+        /* MENU */
+            nav li { 
+                background-image: url(media/menu.png);
+                background-repeat: no-repeat;
+                background-position: top;
+                background-size: 50px;
+                background-position-y: 70px; }
+
+            nav li:hover { background-position-y: 6px; }
+            nav li:hover a { color: #fff; }
+
+    /* SECTION 1 */
+        /* LETRAS PIKACHU */
+            #sec1 h2 span{ position: relative; }
+            #sec1 .container:hover h2 span { right: 0px; }
+            /* NTH CHILD */
+                #sec1 h2 span:nth-child(1) { right: -490px; }
+                #sec1 h2 span:nth-child(2) { right: -340px; }
+                #sec1 h2 span:nth-child(3) { right: -250px; }
+                #sec1 h2 span:nth-child(4) { right: -130px; }
+                #sec1 h2 span:nth-child(5) { right: 10px; }
+                #sec1 h2 span:nth-child(6) { right: 160px; }
+                #sec1 h2 span:nth-child(7) { right: 310px; }
+            
+        /* LETS GO PIKACHU */
+            .lead { 
+                display: flex;
+                overflow: hidden; 
+                position: relative; }
+
+            .lead span {
+                transform: translateX(1000px);
+                animation-name: movement-lets-go;
+                animation-delay: 0s;
+                animation-duration: 1s;
+                animation-iteration-count: 1;
+                animation-fill-mode: forwards; }
+
+            .lead span:nth-child(1) { animation-delay: 0s; }
+            .lead span:nth-child(2) { animation-delay: 0.3s; }
+            .lead span:nth-child(3) { animation-delay: 0.6s; }
+
+            @keyframes movement-lets-go{
+                0%{ transform: translateX(990px); }
+                100%{ transform: translateX(0px); } 
+            }
+        
+    /* SECTION 2 */
+        #sec2 .persp:hover { transform: perspective(500px) rotateX(360deg) ; }
+
+    
+    /* SECTION 3 */
+        /* HUE BACKGROUND ROTATION */
+            #sec3 .anim1 {
+                animation-name: bakcgorund-change;
+                animation-duration: 1s;
+                animation-play-state: paused;
+                animation-iteration-count: infinite; }
+            #sec3 .anim1:hover {
+                transform: scale(1.3);
+                animation-play-state: running; }
+            @keyframes bakcgorund-change {
+                0% { background-color: #f00; }
+                25% { background-color: #0f0; }
+                50% { background-color: #00f; }
+                75% { background-color: #ff0; }
+                100% { background-color: #f0f; } 
+            }
+
+        /* BACKGROUND CARDS */
+            .anim2 div:nth-child(2) {
+                transition: transform 1.5s 1s, z-index 1s 1.5s;
+                z-index: 1; }
+
+            .anim2:hover div:nth-child(2) {
+                z-index: 3;
+                transform: translateY(280px) perspective(600px) rotateX(70deg);
+                transition: transform 2s 2s, z-index 1s 1.5s; }
+
+            .anim2 div:nth-child(3) {
+                transition: 1.5s 1.5s;
+                z-index: 2; }
+
+            .anim2:hover div:nth-child(3) {
+                transform: translateY(300px) perspective(600px) rotateX(70deg);
+                transition: 1.5s 1s; }
+
+        /* ANIMATION GALLERY 1 */
+            #ang1 {
+                overflow: hidden;
+                height: 288.08px; }
+
+            #ang1 .line #anim {
+                transform: translateY(0px); 
+                width: 16.7%;
+                height: 288.08px;
+                display: flex;
+                position: relative;
+                justify-content: center;
+                align-items: flex-end;
+                transition-property: all;
+                transition-duration: 1s !important; }
+
+            #ang1:hover .line #anim {
+                transform: translateY(-288.08px); }
+
+            h3 {
+                font-weight: bold;
+                font-size: 1.5em;
+                margin: 0px; }
+
+            #ang1 .line #anim:nth-child(1) { 
+                transition-delay: 0s; 
+                background-color: #ff000090; }
+            #ang1 .line #anim:nth-child(2) { 
+                transition-delay: 0.2s; 
+                background-color: #ffa50090; }
+            #ang1 .line #anim:nth-child(3) {
+                transition-delay: 0.4s; 
+                background-color: #ffff0090; }
+            #ang1 .line #anim:nth-child(4) {
+                transition-delay: 0.6s; 
+                background-color: #00800090; }
+            #ang1 .line #anim:nth-child(5) {
+                transition-delay: 0.8s; 
+                background-color: #0000ff90; }
+            #ang1 .line #anim:nth-child(6) {
+                transition-delay: 1s; 
+                background-color: #80008090; }
+
+            #ang1:hover .line #anim:nth-child(1) { 
+                transition-delay: 0s; 
+                background-color: #ff000090; }
+            #ang1:hover .line #anim:nth-child(2) { 
+                transition-delay: 0.2s; 
+                background-color: #ffa50090; }
+            #ang1:hover .line #anim:nth-child(3) {
+                transition-delay: 0.4s; 
+                background-color: #ffff0090; }
+            #ang1:hover .line #anim:nth-child(4) {
+                transition-delay: 0.6s; 
+                background-color: #00800090; }
+            #ang1:hover .line #anim:nth-child(5) {
+                transition-delay: 0.8s; 
+                background-color: #0000ff90; }
+            #ang1:hover .line #anim:nth-child(6) {
+                transition-delay: 1s; 
+                background-color: #80008090; }
+
+        /* ANIMATION GALLERY 2 */
+            #ang2 img {
+                transform: perspective(500px);
+                animation-name: forma-rotation;
+                animation-duration: 1s;
+                animation-play-state: paused;
+                animation-iteration-count: infinite; }
+            #ang2:hover img {
+                transform: scale(1.3);
+                animation-play-state: running; }
+            @keyframes forma-rotation {
+                0% { transform: rotateX(0deg); }
+                100% { transform: rotateX(360deg); } 
+            }
+
+        /* ANIMATION GALLERY 3 */
+            #ang3:hover img { transform: translate(-800px, -800px) rotateZ(1800deg); }
+
+        /* ANIMATION GALLERY 4 */
+            #ang4:hover img { 
+                filter: hue-rotate(1800deg);
+                transform: rotateZ(1800deg) scale(0); }
